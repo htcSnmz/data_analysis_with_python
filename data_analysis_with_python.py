@@ -49,6 +49,7 @@ def cat_summary(dataframe, col_name, plot=False):
     df = pd.DataFrame({
         col_name: dataframe[col_name].value_counts(),
         "Ratio": dataframe[col_name].value_counts() / len(dataframe) * 100
+        # "Ratio" : dataframe[col_name].value_counts(normalize=True) * 100
     })
     print(df)
     print("######################################")
